@@ -7,7 +7,8 @@ Python 2.7
 python main.py
 
 List of available commands
-Note: Commands are case sensitive
+#####Note: 
+*Commands are case sensitive
 
 #### pwd
 Displays the present working directory
