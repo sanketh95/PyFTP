@@ -64,7 +64,7 @@ class CommandHandler(object):
 				client.getCon().cwd(key)
 				self.__searchrec(client,args)
 			except Exception, e:
-				return
+				pass
 			finally:
 				if search_key in key:
 					IO.output('%s/%s'% (client.getCon().pwd(),key))
