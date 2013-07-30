@@ -89,6 +89,26 @@ class CommandHandler(object):
 			IO.output(client.getCon().pwd())
 		except Exception, e:
 			IO.output(e)
+
+	def download(self,client,args):
+		if not args:
+			IO.output('Invalid')
+			return
+		try:	
+			if args[0] == '-a':
+				f = open(args[1],'w')
+				if not f:
+					return
+				client.getCon().retrlines('RETR '+args[1],f.write)
+				f.close()
+			elif args[0] == '-b':
+				f = open(args[1],'wb')
+				if not f:
+					return
+				client.getCon().retrbinary('RETR ' + args[1],f.write)
+				f.close()
+		except Exception, e:
+			raise e
 		
 
 		
