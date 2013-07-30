@@ -11,5 +11,11 @@ command_desc={
 	'pwd':'Present Working Directory',
 	'cd':'Changes directory',
 	'ls':'List the contents of a directory'
-	
+
+}
+
+
+commad_usage={
+	'help':'help <list ofcommands separated by space:optional>',
+	'ls':'ls <dirname:optional> If not dirname provided lists pwd contents'
 }

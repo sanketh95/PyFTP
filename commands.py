@@ -1,3 +1,8 @@
+
+'''
+Author: Sanketh
+'''
+
 from IO import *
 from constants import *
 import sys
@@ -129,7 +134,7 @@ class CommandHandler(object):
 				f.close()
 
 		except Exception, e:
-			raise e
+			IO.output(e)
 		
 
 		
