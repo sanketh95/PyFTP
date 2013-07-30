@@ -109,6 +109,27 @@ class CommandHandler(object):
 				f.close()
 		except Exception, e:
 			raise e
+
+	def upload(self,client,args):
+		if not args:
+			IO.output('Invalid')
+			return
+		try:
+			if args[0] == '-a':
+				f = open(args[1],'r')
+				if not f:
+					return
+				client.getCon().storlines('STOR %s' % args[1],f)
+				f.close()
+			elif args[0] == '-b':
+				f = open(args[1],'b')
+				if not f:
+					return
+				client.getCon().storlines('STOR %s' % args[1],f)
+				f.close()
+
+		except Exception, e:
+			raise e
 		
 
 		
