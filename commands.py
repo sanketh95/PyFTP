@@ -127,7 +127,7 @@ class CommandHandler(object):
 				client.getCon().storlines('STOR %s' % args[1],f)
 				f.close()
 			elif args[0] == '-b':
-				f = open(args[1],'b')
+				f = open(args[1],'rb')
 				if not f:
 					return
 				client.getCon().storlines('STOR %s' % args[1],f)
