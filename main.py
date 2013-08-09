@@ -4,7 +4,9 @@ from shell import *
 import sys, getopt
 
 def main(argv):
-
+	if not argv:
+		usage()
+		sys.exit()
 	hostname=argv[0]
 	port=21
 	username='anonymous' #Default username
@@ -40,6 +42,14 @@ def main(argv):
 			sh = Shell(CLIENT(hostname,port,username,password))
 		except Exception,e:
 			print e
+
+def usage():
+	print 'Usage:'
+	print 'pyftp <hostname> -p <portnum> -u <username> -P <password>'
+	print 'optional parameters:'
+	print '-p: Default set to 1'
+	print '-u: Default is anonymous'
+	print '-P: Default is anonymous@'
 
 if(__name__=='__main__'):
 	main(sys.argv[1:])
