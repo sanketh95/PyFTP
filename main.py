@@ -2,6 +2,7 @@ from exception import *
 from clientlib import *
 from shell import *
 import sys, getopt
+import settings.py
 
 def main(argv):
 	if not argv:
