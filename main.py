@@ -2,7 +2,7 @@ from exception import *
 from clientlib import *
 from shell import *
 import sys, getopt
-import settings.py
+import settings
 
 def main(argv):
 	if not argv:
@@ -48,7 +48,7 @@ def usage():
 	print 'Usage:'
 	print 'pyftp <hostname> -p <portnum> -u <username> -P <password>'
 	print 'optional parameters:'
-	print '-p: Default set to 1'
+	print '-p: Default set to 21'
 	print '-u: Default is anonymous'
 	print '-P: Default is anonymous@'
 
