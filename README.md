@@ -7,9 +7,9 @@ Python 2.7
 ####For Linux/Unix users:
 *	To clone the repo use `git clone https://github.com/sanketh95/PyFTP.git`
 *	cd into the PyFTP directory
-*	run `sudo python config.php`
+*	run `sudo python config.py`
 *	Run the program by using the command `pyftp`
-*	If you change the directory to a different location you have to run `sudo python config` again
+*	If you change the directory to a different location you have to run `sudo python config.py` again
 
 ### Usage:
 python main.py
